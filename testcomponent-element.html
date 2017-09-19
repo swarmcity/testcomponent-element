@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="testcomponent-element">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `testcomponent-element`
+     * test web component
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class TestcomponentElement extends Polymer.Element {
+      static get is() { return 'testcomponent-element'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'Swarm City testcomponent-element'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(TestcomponentElement.is, TestcomponentElement);
+  </script>
+</dom-module>
